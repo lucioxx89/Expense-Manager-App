@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ExpenseDate from "./ExpenseDate";
+// import ExpenseDate from "./ExpenseDate";
 import "./ExpenseForm.css";
 
 function ExpenseForm(props) {
@@ -8,7 +8,7 @@ function ExpenseForm(props) {
   const [enteredDate, setEnteredDate] = useState("");
 
   const titleChangeHandler = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setEnteredTitle(event.target.value);
   };
 
@@ -42,9 +42,8 @@ function ExpenseForm(props) {
         <div className="new-expense__control">
           <label> Title</label>
           <input
-            type="text"
             onChange={titleChangeHandler}
-            name="title"
+            type="text"
             value={enteredTitle}
           />
         </div>
