@@ -8,7 +8,6 @@ function ExpenseForm(props) {
   const [enteredDate, setEnteredDate] = useState("");
 
   const titleChangeHandler = (event) => {
-    // console.log(event.target.value);
     setEnteredTitle(event.target.value);
   };
 
@@ -65,11 +64,14 @@ function ExpenseForm(props) {
             onChange={dateChangeHandler}
             type="date"
             value={enteredDate} //two way binding: set value
-            min="2021-01-01"
-            max="2022-12-31"
+            min="2020-01-01"
+            max="2023-12-31"
           />
         </div>
         <div className="new-expense__actions">
+          <button type="button" onClick={props.onCancel}>
+            Cancel
+          </button>
           <button type="submit"> Add new Expense</button>
         </div>
       </div>
